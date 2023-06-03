@@ -73,10 +73,11 @@ int main(int argc, char** argv) {
     std::cout << "Chi-Quadrado / ndf = " << chiQuad / ndf << std::endl;
 
     //Legenda
-    TLegend *leg = new TLegend(0.6,0.6,0.87,0.87);
+    TLegend *leg = new TLegend(0.145,0.11,0.50,0.37);
     leg->SetBorderSize(0);
     leg->AddEntry(hist,"Dados adquiridos", "f");
     leg->AddEntry(fit, "Ajuste ao pico de 620 keV", "l");
+    leg->AddEntry(linha, "Pico de 620 keV (MCA)", "l");
     leg->Draw();
 
     c1->Print("graphs/Cesio.tex");
